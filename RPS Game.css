@@ -1,0 +1,40 @@
+body {
+  background-image: radial-gradient(#eeaedb, #b91d73);
+  height: 100vh;
+  font-family: "lobster", cursive;
+}
+
+h1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  /* display: block;
+  margin-left: auto;
+  margin-right: auto; */
+  height: 150px;
+}
+.rotate-center {
+  animation: rotate-center 0.6s ease-in-out both;
+}
+
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  transition: transform 0.5s;
+  height: 20px;
+  background-image: linear-gradient(lightblue, blue);
+}
+
+button:hover {
+  transform: scale(1.5);
+}

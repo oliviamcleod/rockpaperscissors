@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+  </head>    
+  <body>
+      <script>
+        var playerMove = "paper";//could be rock, paper or scissors)
+        var cpuMove = "rock";//could be rock, paper or scissors)
+
+        
+        if (playerMove === "rock" && cpuMove === "rock") {
+            console.log("its a draw!")
+        }
+        else if (playerMove === "paper" && cpuMove === "rock") {
+            console.log("you win!")
+        }
+        else if (playerMove ==="scissors" && cpuMove ==="rock") {
+            console.log("you lose!")
+        }
+
+        if (playerMove === "rock" && cpuMove === "paper") {
+            console.log("you lose!")
+        }
+        else if (playerMove === "paper" && cpuMove === "paper") {
+            console.log("it's a draw!")
+        }
+        else if (playerMove ==="scissors" && cpuMove ==="paper") {
+            console.log("you win!")
+
+        }if (playerMove === "rock" && cpuMove === "scissors") {
+            console.log("you win!")
+        }
+        else if (playerMove === "paper" && cpuMove === "scissors") {
+            console.log("you lose!")
+        }
+        else if (playerMove ==="scissors" && cpuMove ==="scissors") {
+            console.log("it's a draw!")
+        }
+        
+      </script>
+</body>
+</html>

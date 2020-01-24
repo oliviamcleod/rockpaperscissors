@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+  </head>    
+  <body>
+      
+      <script>
+        
+        function playTheGame() { 
+        var playerMove = prompt("Choose your move: rock, paper, or scissors?"); //could be rock, paper or scissors)
+        //could be rock, paper or scissors)
+        var cpuMove = generatecomputerMove();
+
+        function generatecomputerMove () {
+        var randomNumber = Math.random();
+
+            if (randomNumber <= 0.33) {
+                return "rock";
+            }
+            else if (randomNumber > 0.33 && randomNumber <= 0.66) {
+                return "paper";
+            }
+            else {
+                return "scissors";
+            }
+        }
+
+            console.log("Player chose: ", playerMove);
+            console.log("Computer chose: ", cpuMove);
+
+        if (cpuMove === "rock"){
+            if (playerMove === "rock"){
+                console.log("it's a draw")
+            }
+            else if (playerMove === "paper"){
+                console.log("you win!")
+            }
+            else if(playerMove === "scissors"){
+            console.log("you lose!")}
+        }
+            else if (cpuMove === "paper"){
+            if (playerMove === "rock"){
+                console.log("you lose")}
+            else if (playerMove === "paper"){
+                console.log("its a draw")
+            }
+            else if(playerMove === "scissors"){
+            console.log("you win")
+            }
+        }
+            else if (cpuMove === "scissors"){
+            if (playerMove === "rock"){
+                console.log("you win!")}
+            else if (playerMove === "paper"){
+                console.log("you lose!")
+            }
+            else if(playerMove === "scissors"){
+            console.log("it's a draw")
+            }
+        }
+    }
+        var isPlaying = true;
+        while (isPlaying) {
+            playTheGame();
+            isPlaying = confirm("wanna continue?");
+        }
+      </script>
+</body>
+</html>
